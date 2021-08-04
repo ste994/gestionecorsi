@@ -17,11 +17,12 @@ public interface DAOConstants {
 			+ "precedentiFormativi = ? where codCorsista = ?";
 	String DELETE_CORSISTI = "delete from corsisti where codCorsista = ?";
 	
+	//DOCENTI
 	String SELECT_DOCENTI = "select * from docenti";
 	String SELECT_DOCENTI_BY_ID = "select * from docenti where coddocente = ?";
 	
-	
-	
+	//CORSI CORSISTI
+	String SELECT_CORSI_CORSISTI = "select * from corsi_corsisti";
 	
 	
 	
