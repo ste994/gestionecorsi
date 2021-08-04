@@ -24,7 +24,8 @@ public interface DAOConstants {
 	//CORSI CORSISTI
 	String SELECT_CORSI_CORSISTI = "select * from corsi_corsisti";
 	
-	
+	//AMMINISTRATORI
+	String SELECT_ADMINPASS = "select password from amministratori where codAdmin = ?";
 	
 	
 }
