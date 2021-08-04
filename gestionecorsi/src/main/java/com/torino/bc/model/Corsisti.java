@@ -30,6 +30,13 @@ public class Corsisti {
 	public void setPrecedentiFormativi(String precedentiFormativi) {
 		this.precedentiFormativi = precedentiFormativi;
 	}
+	@Override
+	public String toString() {
+		return "Corsisti [codCorsista=" + codCorsista + ", nomeCorsista=" + nomeCorsista + ", cognomeCorsista="
+				+ cognomeCorsista + ", precedentiFormativi=" + precedentiFormativi + "]";
+	}
+	
+	
 	
 	
 }
