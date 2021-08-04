@@ -2,16 +2,16 @@ package com.torino.bc.model;
 
 public class Docenti {
 
-    private long coddocente;
+    private long codDocente;
     private String nomeDocente ;
     private String cognomeDocente;
-    private String cvdocente;
+    private String cvDocente;
 
-    public long getCoddocente() {
-        return coddocente;
+    public long getCodDocente() {
+        return codDocente;
     }
-    public void setCoddocente(long coddocente) {
-        this.coddocente = coddocente;
+    public void setCodDocente(long codDocente) {
+        this.codDocente = codDocente;
     }
     public String getNomeDocente() {
         return nomeDocente;
@@ -25,12 +25,18 @@ public class Docenti {
     public void setCognomeDocente(String cognomeDocente) {
         this.cognomeDocente = cognomeDocente;
     }
-    public String getCvdocente() {
-        return cvdocente;
+    public String getCvDocente() {
+        return cvDocente;
     }
-    public void setCvdocente(String cvdocente) {
-        this.cvdocente = cvdocente;
+    public void setCvDocente(String cvDocente) {
+        this.cvDocente = cvDocente;
     }
+	@Override
+	public String toString() {
+		return "Docenti [codDocente = " + codDocente + ", nomeDocente = " 
+				+ nomeDocente + ", cognomeDocente = "
+				+ cognomeDocente + ", cvDocente = " + cvDocente + "]";
+	}
 }
 
 
