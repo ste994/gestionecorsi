@@ -5,6 +5,7 @@ public class Corsisti {
 	private String nomeCorsista;
 	private String cognomeCorsista;
 	private String precedentiFormativi;
+	
 	public long getCodCorsista() {
 		return codCorsista;
 	}

@@ -10,7 +10,7 @@ import javax.sql.rowset.CachedRowSet;
 
 import com.torino.bc.model.Corsi;
 
-public class CorsiDAO implements GenericDAO<Corsi>, DAOConstants {
+public class CorsiDAO extends AdapterDAO<Corsi> implements DAOConstants {
 	private CachedRowSet rowSet;
 	
 	public static CorsiDAO getFactory() throws DAOException {
