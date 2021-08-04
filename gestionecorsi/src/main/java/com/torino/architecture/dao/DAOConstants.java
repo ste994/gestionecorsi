@@ -16,4 +16,14 @@ public interface DAOConstants {
 	String UPDATE_CORSISTI = "update corsisti set nomeCorsista = ?, cognomeCorsista = ?, "
 			+ "precedentiFormativi = ? where codCorsista = ?";
 	String DELETE_CORSISTI = "delete from corsisti where codCorsista = ?";
+	
+	String SELECT_DOCENTI = "select * from docenti";
+	String SELECT_DOCENTI_BY_ID = "select * from docenti where coddocente = ?";
+	
+	
+	
+	
+	
+	
+	
 }

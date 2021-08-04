@@ -1,6 +1,8 @@
 package com.torino.architecture.dao;
 
 import javax.sql.rowset.CachedRowSet;
+import javax.sql.rowset.RowSetProvider;
+
 import com.torino.bc.model.Corsisti;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,11 +11,18 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class CorsistiDAO extends AdapterDAO<Corsisti> implements DAOConstants {
-
-	private CachedRowSet rowSet;
-	
 	public static CorsistiDAO getFactory() throws DAOException {
 		return new CorsistiDAO();
+	}
+	
+	private CachedRowSet rowSet;
+
+	private CorsistiDAO() throws DAOException {
+		try {
+			rowSet = RowSetProvider.newFactory().createCachedRowSet();
+		} catch (SQLException sql) {
+			throw new DAOException(sql);
+		}
 	}
 	
 	@Override

@@ -9,6 +9,7 @@ public class Corsi {
 	private Date dataInizioCorso;
 	private Date dataFineCorso;
 	private double costoCorso;
+	
 	private String commentiCorso;
 	private int aulaCorso;
 	private int codDocente;
@@ -62,5 +63,10 @@ public class Corsi {
 	public void setCodDocente(int codDocente) {
 		this.codDocente = codDocente;
 	}
-	
+	@Override
+	public String toString() {
+		return "Corsi [codCorso=" + codCorso + ", nomeCorso=" + nomeCorso + ", dataInizioCorso=" + dataInizioCorso
+				+ ", dataFineCorso=" + dataFineCorso + ", costoCorso=" + costoCorso + ", commentiCorso=" + commentiCorso
+				+ ", aulaCorso=" + aulaCorso + ", codDocente=" + codDocente + "]";
+	}
 }
