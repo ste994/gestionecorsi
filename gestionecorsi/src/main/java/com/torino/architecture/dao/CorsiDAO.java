@@ -7,21 +7,29 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import javax.sql.rowset.CachedRowSet;
+import javax.sql.rowset.RowSetProvider;
 
 import com.torino.bc.model.Corsi;
 
 public class CorsiDAO extends AdapterDAO<Corsi> implements DAOConstants {
-	private CachedRowSet rowSet;
-	
 	public static CorsiDAO getFactory() throws DAOException {
 		return new CorsiDAO();
 	}
 	
+	private CachedRowSet rowSet;
+
+	private CorsiDAO() throws DAOException {
+		try {
+			rowSet = RowSetProvider.newFactory().createCachedRowSet();
+		} catch (SQLException sql) {
+			throw new DAOException(sql);
+		}
+	}
 	
 	@Override
 	public void create(Connection conn, Corsi c) throws DAOException {
 		try {
-			rowSet.setCommand(INSERT_CORSI);
+			rowSet.setCommand(SELECT_CORSI);
 			rowSet.execute(conn);
 			rowSet.moveToInsertRow();
 			rowSet.updateLong(1,c.getCodCorso());
