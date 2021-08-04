@@ -8,7 +8,6 @@ public class Corsi {
 	private String nomeCorso;
 	private Date dataInizioCorso;
 	private Date dataFineCorso;
-	private String password;
 	private double costoCorso;
 	private String commentiCorso;
 	private int aulaCorso;
@@ -38,12 +37,7 @@ public class Corsi {
 	public void setDataFineCorso(Date dataFineCorso) {
 		this.dataFineCorso = dataFineCorso;
 	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
+
 	public double getCostoCorso() {
 		return costoCorso;
 	}
