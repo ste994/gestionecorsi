@@ -9,7 +9,7 @@ create table amministratori(
 codadmin int,
 nomeadmin varchar2(30) not null,
 cognomeadmin varchar2(30) not null,
-password varchar2(50) not null,
+password varchar2(500) not null,
 constraint p_codadmin primary key(codadmin));
 
 create table corsi(
