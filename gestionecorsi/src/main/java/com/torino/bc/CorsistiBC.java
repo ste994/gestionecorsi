@@ -7,21 +7,25 @@ import java.sql.SQLException;
 import com.torino.architecture.dao.CorsistiDAO;
 import com.torino.architecture.dao.DAOException;
 import com.torino.architecture.dbaccess.DBAccess;
+import com.torino.bc.idgenerator.CorsistiIdGenerator;
 import com.torino.bc.model.Corsisti;
 
 public class CorsistiBC {
 	private Connection conn;
+	private CorsistiIdGenerator idGen;
 
-	public CorsistiBC() throws DAOException, ClassNotFoundException, IOException{
-			conn = DBAccess.getConnection();
-}
+	public CorsistiBC() throws DAOException, ClassNotFoundException, IOException {
+		conn = DBAccess.getConnection();
+		idGen = CorsistiIdGenerator.getInstance();
+	}
 
 	public void createOrUpdate(Corsisti c) throws DAOException, ClassNotFoundException, IOException {
 		try {
-			if (c.getCodCorsista() > 0) { 
+			if (c.getCodCorsista() > 0) {
 				CorsistiDAO.getFactory().update(conn, c);
 			} else {
-			 CorsistiDAO.getFactory().create(conn, c);
+				c.setCodCorsista(idGen.getNextId());
+				CorsistiDAO.getFactory().create(conn, c);
 			}
 		} catch (SQLException sql) {
 			throw new DAOException(sql);

@@ -7,13 +7,16 @@ import java.sql.SQLException;
 import com.torino.architecture.dao.CorsiDAO;
 import com.torino.architecture.dao.DAOException;
 import com.torino.architecture.dbaccess.DBAccess;
+import com.torino.bc.idgenerator.CorsiIdGenerator;
 import com.torino.bc.model.Corsi;
 
 public class CorsiBC {
 	private Connection conn;
+	private CorsiIdGenerator idGen;
 
 	public CorsiBC() throws DAOException, ClassNotFoundException, IOException{
 			conn = DBAccess.getConnection();
+			idGen = CorsiIdGenerator.getInstance();
 }
 
 	public void createOrUpdate(Corsi c) throws DAOException, ClassNotFoundException, IOException {
@@ -21,6 +24,7 @@ public class CorsiBC {
 			if (c.getCodCorso() > 0) { 
 				CorsiDAO.getFactory().update(conn, c);
 			} else {
+			 c.setCodCorso(idGen.getNextId());
 			 CorsiDAO.getFactory().create(conn, c);
 			}
 		} catch (SQLException sql) {

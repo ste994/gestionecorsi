@@ -44,7 +44,7 @@ class CorsiCorsistiDAOTest {
 		corsisti.setPrecedentiFormativi("si");
 		
 		cc = new CorsiCorsisti();
-		cc.setCodcc(1);
+		//cc.setCodcc(1);
 		cc.setCodcorso(0);
 		cc.setCodcorsista(0);
 		
