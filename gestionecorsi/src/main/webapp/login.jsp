@@ -20,9 +20,9 @@
 	<form action="/<%=application.getServletContextName()%>/controlloLogin"method="post"
 	id="userForm" class="form-horizontal">
 		
-	<!------------------------------CODADMIN----------------------------------->
+	<!------------------------------NOMEADMIN---------------------------------->
 	<div class="form-group">
-		<label class="col-md-1 control-label">Codice admin</label>
+		<label class="col-md-1 control-label">Nome admin</label>
 		<div class="col-md-4 inputGroupContainer">
 			<div class="input-group">
 				<span class="input-group-addon">

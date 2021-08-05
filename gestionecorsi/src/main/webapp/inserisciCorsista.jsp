@@ -4,7 +4,7 @@
 <html>
 <head>
 <%@include file="head.jsp"%>
-<title>Inserimento Corsista</title>
+<title>Inserimento corsista</title>
 <link rel="stylesheet"
 	href="/<%=application.getServletContextName()%>/css/style.css">
 <script src="js/convalida.js"></script>
@@ -15,7 +15,7 @@
 		<div class="page-header">
 			<h3>Inserire i dati del nuovo corsista</h3>
 		</div>
-		<form action="/<%=application.getServletContextName()%>/salvadati"
+		<form action="/<%=application.getServletContextName()%>/inserisciCorsista"
 			method="post" id="userForm" class="form-horizontal">
 
 			<!-- --------------Nome -->
@@ -50,29 +50,28 @@
 
 			<!-- --------------Precedenti Formativi -->
 			<div class="form-group">
-				<label class="col-md-1 control-label">Precedenti Formativi</label>
+				<label class="col-md-1 control-label">Precedenti formativi</label>
 				<div class="col-md-4 inputGroupContainer">
 					<div class="input-group">
-						
-						<input type="radio" id="si" name="precedentiFormativi" value="Si">
-					  <label for="si">Si</label>&nbsp;  
-					<input type="radio" id="no" name="precedentiFormativi" value="No">   
-					<label for="no">No</label><br>
+
+						<input type="radio" id="si"
+							name="precedentiFormativi" value="Si">   <label for="si">Si</label>&nbsp; 
+						<input type="radio" id="no"
+							name="precedentiFormativi" value="No">   <label for="no">No</label><br>
 					</div>
-					
+
 
 				</div>
 				<div class="col-md-7 control-label" id="infoPF"></div>
 			</div>
 
+			<button type="submit" class="btn btn-primary">
+				Inserisci corsista <span class="glyphicon glyphicon-send"></span>
+			</button>
+
 		</form>
 
-		<button type="submit" class="btn btn-primary">
-			Inserisci Corsista <span class="glyphicon glyphicon-send"></span>
-		</button>
-
 	</div>
-
 
 	<footer>
 		<%@include file="footer.html"%>
