@@ -17,10 +17,10 @@ public class Login implements DAOConstants {
 		conn = DBAccess.getConnection();
 	}
 	
-	public String getAdminPass (long id) throws DAOException {
+	public String getAdminPass (String nome) throws DAOException {
 		try {
 			PreparedStatement ps = conn.prepareStatement(SELECT_ADMINPASS);
-			ps.setLong(1, id);
+			ps.setString(1, nome);
 			ResultSet rs = ps.executeQuery();
 			if(rs.next())
 				return rs.getString(1);

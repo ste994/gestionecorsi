@@ -12,13 +12,10 @@
 <jsp:include page="nav.jsp" />
 	<div class="container">
 	<div class="well" style="background-coor:#111">
-	<h3 style="color: #FFF"> Negozio on-line</h3>
-	<p><a class="btn btn-primary btn-lg" href="registra.jsp">
-		Registrati gratis &raquo;
-	</a></p>
+	<h3 style="color: #FFF"> Corso on-line</h3>
 	</div>
 		<div class="page-header">
-			<h3>Catalogo prodotti on-line</h3>
+			<h3>Corsi disponibili</h3>
 		</div>
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
