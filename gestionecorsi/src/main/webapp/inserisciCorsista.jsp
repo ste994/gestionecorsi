@@ -5,7 +5,8 @@
 <head>
 <%@include file="head.jsp"%>
 <title>Inserimento Corsista</title>
-<link rel="stylesheet" href="/<%=application.getServletContextName()%>/css/style.css">
+<link rel="stylesheet"
+	href="/<%=application.getServletContextName()%>/css/style.css">
 <script src="js/convalida.js"></script>
 </head>
 <body>
@@ -24,8 +25,8 @@
 					<div class="input-group">
 						<span class="input-group-addon"> <i
 							class="glyphicon glyphicon-user"></i>
-						</span> <input type="text" name="nomeCorsista" id="nomeCorsista" placeholder="Nome..."
-							class="form-control">
+						</span> <input type="text" name="nomeCorsista" id="nomeCorsista"
+							placeholder="Nome..." class="form-control">
 					</div>
 
 				</div>
@@ -54,22 +55,26 @@
 					<div class="input-group">
 						<span class="input-group-addon"> <i
 							class="glyphicon glyphicon-user"></i>
-						</span> <input type="text" name="precedentiFormativi" id="precedentiFormativi" placeholder=" Si/No ..."
-							class="form-control" maxlength="2">
+						</span> 
+						<input type="radio" id="si" name="precedentiFormativi" value="Si">
+					  <label for="si">Si</label>&nbsp;  
+					<input type="radio" id="no" name="precedentiFormativi" value="No">   
+					<label for="no">No</label><br>
 					</div>
+					
 
 				</div>
 				<div class="col-md-7 control-label" id="infoPF"></div>
 			</div>
 
 		</form>
-		
-	<button type="submit" class="btn btn-primary">Inserisci Corsista
-		<span class="glyphicon glyphicon-send"></span>
-	</button>
-	
+
+		<button type="submit" class="btn btn-primary">
+			Inserisci Corsista <span class="glyphicon glyphicon-send"></span>
+		</button>
+
 	</div>
-	
+
 
 	<footer>
 		<%@include file="footer.html"%>
