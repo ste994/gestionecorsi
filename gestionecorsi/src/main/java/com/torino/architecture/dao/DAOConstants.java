@@ -26,6 +26,9 @@ public interface DAOConstants {
 	
 	//AMMINISTRATORI
 	String SELECT_ADMINPASS = "select password from amministratori where nomeAdmin = ?";
+	//SEQUENZE
+	String SELECT_CORSISEQ ="select corsi_seq.nextval from dual";
+	
 	
 	
 }

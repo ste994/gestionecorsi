@@ -5,8 +5,8 @@ insert into docenti values(3, 'Paolo', 'Bianchi', '/cv/paolo.jpeg');
 insert into docenti values(4, 'Laura', 'Gialli', '/cv/laura.jpeg');
 
 
-insert into corsisti values(1, 'Paolo','Rossi','si');
-insert into corsisti values(2, 'Marco','Pellegrini','si');
-insert into corsisti values(3, 'Giovanni','Bini','no');
-insert into corsisti values(4, 'Mariangela','Rossi','si');
-insert into corsisti values(5, 'Giulia','Verdi','no');
+insert into corsisti values(corsisti_seq.nextval, 'Paolo','Rossi','si');
+insert into corsisti values(corsisti_seq.nextval, 'Marco','Pellegrini','si');
+insert into corsisti values(corsisti_seq.nextval, 'Giovanni','Bini','no');
+insert into corsisti values(corsisti_seq.nextval, 'Mariangela','Rossi','si');
+insert into corsisti values(corsisti_seq.nextval, 'Giulia','Verdi','no');

@@ -39,3 +39,8 @@ codcorso int,
 constraint p_codcc primary key(codcc),
 constraint f_codcors1s7a foreign key(codcorsista) references corsisti(codcorsista) on delete cascade,
 constraint f_codcorso foreign key(codcorso) references corsi(codcorso) on delete cascade);
+
+--sequence
+create sequence corsi_seq;
+create sequence corsisti_seq;
+create sequence corsi_corsisti_seq;
