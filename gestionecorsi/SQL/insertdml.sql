@@ -10,3 +10,5 @@ insert into corsisti values(corsisti_seq.nextval, 'Marco','Pellegrini','si');
 insert into corsisti values(corsisti_seq.nextval, 'Giovanni','Bini','no');
 insert into corsisti values(corsisti_seq.nextval, 'Mariangela','Rossi','si');
 insert into corsisti values(corsisti_seq.nextval, 'Giulia','Verdi','no');
+
+insert into corsi values(corsi_seq.nextval, 'Java','05-MAG-2021','08-MAG-2021', 300.00, 'Corso intensivo', 5, 1);

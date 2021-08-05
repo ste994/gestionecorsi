@@ -42,12 +42,9 @@
 				<td><%= c[i].getCognomeCorsista() %></td>
 				<td><%= c[i].getPrecedentiFormativi() %></td>
 				<td>
-				<form action="/<%=application.getServletContextName()%>/eliminaCorsista" 
+				<form action="/<%=application.getServletContextName()%>/eliminaCorsista?id=<%=c[i].getCodCorsista()%>" 
 				method="post">
-				<input type="hidden" name="id" value="<%= c[i].getCodCorsista() %>">
-				<input type="hidden" name="marca" value="<%= c[i].getNomeCorsista() %>">
-				<input type="hidden" name="modello" value="<%= c[i].getCognomeCorsista() %>">
-				<input type="hidden" name="prezzo" value="<%= c[i].getPrecedentiFormativi() %>">
+				
 				<button type="submit" class="btn btn-danger btn-sm">
 					<span class="glyphicon glyphicon-trash"></span>
 				</button>
@@ -60,7 +57,7 @@
 		</tbody>
 	</table>
 	
-	<a class="btn btn-primary btn-lg" href="inserisciCorsista.jsp">Inserisci nuovo Corsista
+	<a class="btn btn-primary btn-lg" href="inserisciCorsista.jsp">Inserisci nuovo
 	</a>
 	</div>
 	<hr>
