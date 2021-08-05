@@ -53,9 +53,7 @@
 				<label class="col-md-1 control-label">Precedenti Formativi</label>
 				<div class="col-md-4 inputGroupContainer">
 					<div class="input-group">
-						<span class="input-group-addon"> <i
-							class="glyphicon glyphicon-user"></i>
-						</span> 
+						
 						<input type="radio" id="si" name="precedentiFormativi" value="Si">
 					  <label for="si">Si</label>&nbsp;  
 					<input type="radio" id="no" name="precedentiFormativi" value="No">   

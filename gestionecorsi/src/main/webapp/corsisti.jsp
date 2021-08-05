@@ -24,7 +24,7 @@
 	<table class="table table-hover" style="width:100%;">
 		<thead>
 		<tr>
-			<th style="width:200px;">Codice Corsista</th>
+			<th style="width:200px;">Id</th>
 			<th style="width:200px;">Nome</th>
 			<th style="width:200px;">Cognome</th>
 			<th style="width:200px;">Precedenti Formativi</th>
@@ -60,17 +60,16 @@
 		</tbody>
 	</table>
 	
-	<a class="btn btn-primary btn-lg" href="inserisciCorsista.jsp">Inserisci nuovo Corsista</span>
+	<a class="btn btn-primary btn-lg" href="inserisciCorsista.jsp">Inserisci nuovo Corsista
 	</a>
 	</div>
 	<hr>
-	<a href="carrello.jsp">Riepilogo</a>
 </div>
 <footer><%@include file="footer.html" %></footer>
 </body>
 </html>
 <%
 	} else 
-		response.sendRedirect("accessonegato.jsp");
+		response.sendRedirect("login.jsp");
 %>
 	

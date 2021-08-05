@@ -11,11 +11,11 @@
 <body>
 <jsp:include page="nav.jsp" />
 	<div class="container">
-	<div class="well" style="background-coor:#111">
-	<h3 style="color: #FFF"> Corso on-line</h3>
+	<div class="well" style="background-color:#111">
+	<h3 style="color: #FFF"> Sede Torino</h3>
 	</div>
 		<div class="page-header">
-			<h3>Corsi disponibili</h3>
+			<h3>Gestione corsi</h3>
 		</div>
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
