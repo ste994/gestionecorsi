@@ -28,7 +28,8 @@ public interface DAOConstants {
 	String SELECT_ADMINPASS = "select password from amministratori where nomeAdmin = ?";
 	//SEQUENZE
 	String SELECT_CORSISEQ ="select corsi_seq.nextval from dual";
-	
+	String SELECT_CORSISTISEQ ="select corsisti_seq.nextval from dual";
+	String SELECT_CORSICORSISTISEQ ="select corsicorsisti_seq.nextval from dual";
 	
 	
 }
