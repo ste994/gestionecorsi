@@ -58,7 +58,6 @@ class CorsiDAOtest {
 			corso.setCommentiCorso("PRovaprova prova");
 			corso.setAulaCorso(25);
 			corso.setCodDocente(1);
-			corso.setCodCorso(0);
 			System.out.println(corso.toString());
 			
 			CorsiDAO.getFactory().update(conn, corso);
