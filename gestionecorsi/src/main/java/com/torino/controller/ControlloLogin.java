@@ -31,7 +31,7 @@ public class ControlloLogin extends HttpServlet {
 				if(adminpass != null) {
 					if(adminpass.equals(password)) {
 						session.setAttribute("nome", nome);
-						response.sendRedirect("home.jsp");
+						response.sendRedirect("corsisti.jsp");
 					} else {
 						tentativi --;
 						session.setAttribute("tentativi", tentativi);
