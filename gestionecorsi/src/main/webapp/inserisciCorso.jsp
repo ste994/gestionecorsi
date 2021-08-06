@@ -7,11 +7,26 @@
 <title>Inserimento Corso</title>
 <link rel="stylesheet"
 	href="/<%=application.getServletContextName()%>/css/style.css">
-<script src="js/convalida.js"></script>
+<!-- <script src="js/convalida.js"></script> -->
 </head>
 <body>
 	<jsp:include page="nav.jsp" />
 	<div class="container">
+	<%
+		String errore = (String) session.getAttribute("errore");
+		if (errore != null) {
+		%>
+
+		<div class="alert alert-warning alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert"
+				aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<strong>Warning!</strong><%=errore%>
+		</div>
+		<%
+		}
+		%>
 		<div class="page-header">
 			<h3>Inserire i dati del corso</h3>
 		</div>
