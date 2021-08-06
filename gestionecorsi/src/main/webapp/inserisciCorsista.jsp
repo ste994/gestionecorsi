@@ -7,15 +7,32 @@
 <title>Inserimento corsista</title>
 <link rel="stylesheet"
 	href="/<%=application.getServletContextName()%>/css/style.css">
-<script src="js/convalida.js"></script>
+<!-- <script src="js/convalida.js"></script> -->
 </head>
 <body>
 	<jsp:include page="nav.jsp" />
 	<div class="container">
+		<%
+		String errore = (String) session.getAttribute("errore");
+		if (errore != null) {
+		%>
+
+		<div class="alert alert-warning alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert"
+				aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<strong>Warning!</strong><%=errore%>
+		</div>
+		<%
+		}
+		%>
+	
 		<div class="page-header">
 			<h3>Inserire i dati del nuovo corsista</h3>
 		</div>
-		<form action="/<%=application.getServletContextName()%>/inserisciCorsista"
+		<form
+			action="/<%=application.getServletContextName()%>/inserisciCorsista"
 			method="post" id="userForm" class="form-horizontal">
 
 			<!-- --------------Nome -->
@@ -54,9 +71,8 @@
 				<div class="col-md-4 inputGroupContainer">
 					<div class="input-group">
 
-						<input type="radio" id="si"
-							name="precedentiFormativi" value="Si">   <label for="si">Si</label>&nbsp; 
-						<input type="radio" id="no"
+						<input type="radio" id="si" name="precedentiFormativi" value="Si">
+						  <label for="si">Si</label>&nbsp;  <input type="radio" id="no"
 							name="precedentiFormativi" value="No">   <label for="no">No</label><br>
 					</div>
 
