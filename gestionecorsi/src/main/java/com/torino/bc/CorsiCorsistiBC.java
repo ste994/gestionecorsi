@@ -16,6 +16,7 @@ public class CorsiCorsistiBC {
 
 	public CorsiCorsistiBC() throws DAOException, ClassNotFoundException, IOException {
 		conn = DBAccess.getConnection();
+		idGen = CorsiCorsistiIdGenerator.getInstance();
 	}
 
 	public void create(CorsiCorsisti cc) throws DAOException, ClassNotFoundException, IOException {

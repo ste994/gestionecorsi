@@ -29,7 +29,7 @@ public interface DAOConstants {
 	//SEQUENZE
 	String SELECT_CORSISEQ ="select corsi_seq.nextval from dual";
 	String SELECT_CORSISTISEQ ="select corsisti_seq.nextval from dual";
-	String SELECT_CORSICORSISTISEQ ="select corsicorsisti_seq.nextval from dual";
+	String SELECT_CORSICORSISTISEQ ="select corsi_corsisti_seq.nextval from dual";
 	
 	
 	//QUERY STATISTICHE

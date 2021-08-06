@@ -42,7 +42,6 @@ if (nome != null) {
 					CorsistiBC cbc = new CorsistiBC();
 					Corsisti[] corsisti = cbc.getCorsisti();
 					for (int i = 0; i < corsisti.length; i++) {
-						System.out.println("-------" + corsisti[i].getCodCorsista());
 					%>
 					<tr>
 						<td><%=corsisti[i].getCodCorsista()%></td>
@@ -81,14 +80,15 @@ if (nome != null) {
 											}
 											
 									}
-									System.out.println(codici);
 									CorsiBC corsibc = new CorsiBC();
 									Corsi[] corsi = corsibc.getCorsi();
 									for (int q = 0; q < corsi.length; q++) {
 										if(!codici.contains(corsi[q].getCodCorso())) {
 									%>
 									
-									<li><a href="/<%=application.getServletContextName()%>/iscrizione">
+									<li>
+										
+										<a href="/<%=application.getServletContextName()%>/iscrizione?codCorsista=<%=corsisti[i].getCodCorsista()%>&codCorso=<%=corsi[q].getCodCorso()%>">
 										&nbsp;<%=corsi[q].getNomeCorso()%></a>
 									</li>
 				
