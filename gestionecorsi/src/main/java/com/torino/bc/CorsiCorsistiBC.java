@@ -25,7 +25,13 @@ public class CorsiCorsistiBC {
 		} catch (SQLException sql) {
 			throw new DAOException(sql);
 		}
-
 	}
 
+	public CorsiCorsisti[] getCC() throws DAOException {
+		try {
+			return CorsiCorsistiDAO.getFactory().getAll(conn);
+		} catch (SQLException sql) {
+			throw new DAOException(sql);
+		}
+	}
 }
