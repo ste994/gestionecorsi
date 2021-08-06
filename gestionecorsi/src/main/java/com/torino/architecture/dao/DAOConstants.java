@@ -32,4 +32,16 @@ public interface DAOConstants {
 	String SELECT_CORSICORSISTISEQ ="select corsicorsisti_seq.nextval from dual";
 	
 	
+	//QUERY STATISTICHE
+	String SELECT_NUMEROCORSISTI = "select COUNT(*) from corsisti GROUP BY codCorsista";
+	String SELECT_NOME_MAXFREQ = "select nomecorso from corsi where codcorso = (select codcorso from corsi_corsisti group by codcorso having count(*) = (select max(count(*)) from corsi_corsisti group by codcorso))";
+	String SELECT_DATA_ULTIMO_CORSO ="select MAX(dataIniziocorso) as ultimoCorso from corsi";
+	String SELECT_AVG_DURATA = "";
+	String SELECT_NUM_COMMENTI = "select Count(commenticorso) from corsi";
+	String SELECT_ELENCO_CORSISTI = "select * from corsisti";
+	String SELECT_DOCENTE_MULTI = "select nomedocente, cognomedocente from docenti where coddocente in (select coddocente from corsi group by coddocente having count(*) = (select max(count(*)) from corsi group by coddocente))";
+	String SELECT_CORSI_DISP = "select * from corsi where codCorso in (select codCorso from corsi_corsisti group by codCorso having COUNT(*) < 12)";
+	
+	
+	
 }
